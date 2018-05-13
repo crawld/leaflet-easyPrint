@@ -23,7 +23,8 @@ L.Control.EasyPrint = L.Control.extend({
   },
 
   onAdd: function () { 
-    this.mapContainer = this._map.getContainer();
+    //this.mapContainer = this._map.getContainer();
+    this.mapContainer = document.body;
     this.options.sizeModes = this.options.sizeModes.map(function (sizeMode) {
       if (sizeMode === 'Current') {
         return {
