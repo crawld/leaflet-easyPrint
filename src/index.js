@@ -94,7 +94,7 @@ L.Control.EasyPrint = L.Control.extend({
       zoom: this._map.getZoom(),
       center: this._map.getCenter()
     };
-    if (this.originalState.mapWidth === 'auto') {
+    if (this.originalState.mapWidth === 'auto' || !this.originalState.mapWidth) {
       this.originalState.mapWidth = this._map.getSize().x  + 'px'
       this.originalState.widthWasAuto = true
     } else if (this.originalState.mapWidth.includes('%')) {
